@@ -1,0 +1,33 @@
+{
+  "name": "zt实验室",
+  "version": "1.0",
+  "manifest_version": 3,
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "js": [
+        "scripts/jquery-3.6.1.min.js",
+        "scripts/polyfill.js",
+        "scripts/exceljs.bare.js",
+        "scripts/exceljs.min.js",
+        "scripts/content.js"
+      ],
+      "matches": [
+        "https://syaqjy.fjnu.edu.cn/*"
+      ]
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "*"
+      ],
+      "matches": [
+        "https://*/*"
+      ]
+    }
+  ],
+  "action": {}
+}
